@@ -15,7 +15,7 @@ class CreateLocationsTable extends Migration
     {
         Schema::create('locations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('coutry_id')->unsigned(); //este campo sera o campo que fara o relacionamento com a tabela coutries
+            $table->bigInteger('coutry_id')->unsigned(); //este campo sera o campo que fara o relacionamento com a tabela coutries
             $table->foreign('coutry_id') //definindo que este campo é chave estrangeira
                 ->references('id') //referenciando campo da tabela que ele se relaciona
                 ->on('countries') //referenciando tabela
