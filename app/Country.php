@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Country extends Model
 {
+    protected $fillable=['name'];
     //fazendo metodo que tras o relacionamento one-to-one
     public function location()
     {
