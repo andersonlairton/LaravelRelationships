@@ -12,4 +12,8 @@ class Country extends Model
     {
         return $this->hasMany(Location::class,'coutry_id');//retorna o relacionamento um pra um,especificando o campo
     }
+    public function states()
+    {
+        return $this->hasMany(State::class,'coutry_id');//relacionamento um para muitos
+    }
 }
